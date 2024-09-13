@@ -2,7 +2,7 @@
 
 A webapp developed using SpaceX APIs
 
-Click to View Live Website
+Click to View [Visit the website](https://stratforge-spacex.vercel.app/).
 
 ## Tech Stack
  - React

@@ -1,50 +1,48 @@
-# React + TypeScript + Vite
+# StratForge Assignment - Anto Vimalan S
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A webapp developed using SpaceX APIs
 
-Currently, two official plugins are available:
+Click to View Live Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+ - React
+ - TypeScript
+ - Tailwind CSS
+ - Vite
+ - SWC
 
-## Expanding the ESLint configuration
+## Architecture
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Project Size: Small, so decided with horizontal architecture
 
-- Configure the top-level `parserOptions` property like this:
+### Directory Structure
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- /api - contains all apis which communicates with spacex
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- /components - contains components used in all pages
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- /constants - contains constants 
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- /hooks - contains custom hooks
+
+- /layout - contains main page layout
+
+- /pages - contains all pages and their subpages in /detail directory
+
+- /routes - contains all routes of pages and subpages
+
+- /utils - contains helper functions
+
+## Key Feature:
+
+- Infinite Scrolling paginated APIs for launches section as it contains more than 100 items
+
+## Tech Debt and Future Scope (left due to time constraint)
+
+- Type Safe Components
+- Clean up of Detail Page
+- Add more user experience things like loading, dark mode etc.,
+
+
+
+

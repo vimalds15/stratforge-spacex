@@ -37,7 +37,7 @@ const HomePage = () => {
           <p className="font-semibold">Recent Launches</p>
         </div>
         <Link
-          to="/rockets"
+          to="/launches"
           className="bg-black hover:bg-zinc-700 px-4 py-2 rounded-md transition-all cursor-pointer"
         >
           <p className="font-semibold text-zinc-100">View More</p>

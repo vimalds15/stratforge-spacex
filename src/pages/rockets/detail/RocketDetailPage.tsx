@@ -11,11 +11,9 @@ const RocketDetailPage: React.FC = () => {
 
   const validImages = getValidImages(rocket?.flickr_images);
 
-  console.log(validImages);
 
   const fetchRocketData = async (id) => {
     const { data } = await fetchRocketById(id);
-    console.log(data);
     setRocket(data);
   };
 

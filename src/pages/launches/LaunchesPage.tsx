@@ -16,7 +16,6 @@ const LaunchesPage = () => {
     setLaunches((prev) => [...prev, ...docs]);
   };
 
-  console.log(launches.length);
 
   const { lastElementRef, loading } = useInfiniteScroll(fetchData, hasNextPage);
 

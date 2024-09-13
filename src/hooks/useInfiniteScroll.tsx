@@ -4,23 +4,17 @@ export const useInfiniteScroll = (fetchDataCallback, hasNextPage) => {
   const [offset, setOffset] = useState(0);
   const [loading, setLoading] = useState(false);
   const observer = useRef();
-  const isMounted = useRef(false);
   const lastElementRef = useRef();
 
   const fetchData = async () => {
     setLoading(true);
-    await fetchDataCallback(15,offset);
+    await fetchDataCallback(15, offset);
     setLoading(false);
   };
 
   useEffect(() => {
-    console.log("first",hasNextPage)
     if (hasNextPage) {
-      if (isMounted.current) {
-        fetchData();
-      } else {
-        isMounted.current = true;
-      }
+      fetchData();
     }
   }, [offset, hasNextPage]);
 
